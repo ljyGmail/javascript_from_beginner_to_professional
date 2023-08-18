@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <script>
+      // # Analyzing and modifying data types
+      // ## Working out the type of a variable
+      let testVariable = 1;
+      const variableTypeTest1 = typeof testVariable;
+      const variableTypeTest2 = typeof testVariable;
+      console.log(`variableTypeTest1: ${variableTypeTest1}`);
+      console.log(`variableTypeTest2: ${variableTypeTest2}`);
+
+      let str = "Hello";
+      let nr = 7;
+      let bigNr = 12345678901234n;
+      let bool = true;
+      let sym = Symbol("unique");
+      let undef = undefined;
+      let unknown = null;
+
+      console.log(`str: ${typeof str}`);
+      console.log(`nr: ${typeof nr}`);
+      console.log(`bigNr: ${typeof bigNr}`);
+      console.log(`bool: ${typeof bool}`);
+      console.log(`sym: ${typeof sym}`);
+      console.log(`undef: ${typeof undef}`);
+      console.log(`unknown: ${typeof unknown}`);
+
+      // ## Converting data types
+      let nr1 = 2;
+      let nr2 = "2";
+      console.log(`nr1 * nr2: ${nr1 * nr2}`);
+      console.log(`nr1 + nr2: ${nr1 + nr2}`);
+
+      let nrToStr = 6;
+      nrToStr = String(nrToStr);
+      console.log(`${nrToStr}: ${typeof nrToStr}`);
+
+      let strToNr = "12";
+      strToNr = Number(strToNr);
+      console.log(`${strToNr}: ${typeof strToNr}`);
+
+      let strToBool = "any string will return true";
+      strToBool = Boolean(strToBool);
+      console.log(`${strToBool}: ${typeof strToBool}`);
+
+      let nullToNr = null;
+      nullToNr = Number(nullToNr);
+      console.log(`null ${nullToNr}: ${typeof nullToNr}`);
+
+      let emptyStrToNr = "";
+      emptyStrToNr = Number(emptyStrToNr);
+      console.log(`empty string ${emptyStrToNr}: ${typeof emptyStrToNr}`);
+
+      let strToNr2 = "hello";
+      strToNr2 = Number(strToNr2);
+      console.log(`${strToNr2}: ${typeof strToNr2}`);
+
+      let strToBool2 = "false";
+      strToBool2 = Boolean(strToBool2);
+      console.log(`${strToBool2}: ${typeof strToBool2}`);
+
+      let strToBool3 = "";
+      strToBool3 = Boolean(strToBool3);
+      console.log(`${strToBool3}: ${typeof strToBool3}`);
+
+      nr1 = 2;
+      nr2 = "2";
+      console.log(`nr1 + Number(nr2): ${nr1 + Number(nr2)}`);
+    </script>
+  </head>
+</html>

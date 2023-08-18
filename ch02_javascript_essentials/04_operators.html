@@ -1,0 +1,154 @@
+<html>
+  <head>
+    <script>
+      // # Operators
+      // ## Arithmetic operators
+      // ### Addition
+      let nr1 = 12;
+      let nr2 = 14;
+      let result1 = nr1 + nr2;
+      console.log(`result1: ${result1}`);
+
+      let str1 = "Hello ";
+      let str2 = "addition";
+      let result2 = str1 + str2;
+      console.log(`result2: ${result2}`);
+
+      // ### Subtraction
+      nr1 = 20;
+      nr2 = 4;
+      str1 = "Hi";
+      let nr3 = 3;
+      result1 = nr1 - nr2;
+      result2 = str1 - nr3;
+      console.log("result1:", result1, ", result2:", result2);
+
+      // ### Multiplication
+      nr1 = 15;
+      nr2 = 10;
+      str1 = "Hi";
+      nr3 = 3;
+      result1 = nr1 * nr2;
+      result2 = str1 * nr3;
+      console.log("result1:", result1, ", result2:", result2);
+
+      // ### Division
+      nr1 = 30;
+      nr2 = 5;
+      result1 = nr1 / nr2;
+      console.log(`result1: ${result1}`);
+
+      // ### Exponentiation
+      nr1 = 2;
+      nr2 = 3;
+      result1 = nr1 ** nr2;
+      console.log(`result1: ${result1}`);
+
+      // ### Modulus
+      nr1 = 10;
+      nr2 = 3;
+      result1 = nr1 % nr2;
+      console.log(`${nr1} % ${nr2} = ${result1}`);
+
+      nr3 = 8;
+      let nr4 = 2;
+      result2 = nr3 % nr4;
+      console.log(`${nr3} % ${nr4} = ${result2}`);
+
+      let nr5 = 15;
+      let nr6 = 4;
+      let result3 = nr5 % nr6;
+      console.log(`${nr5} % ${nr6} = ${result3}`);
+
+      // ### Unary operators: increment and decrement
+      nr1 = 4;
+      nr1++;
+      console.log(`nr1: ${nr1}`);
+
+      nr2 = 4;
+      nr2--;
+      nr2 == console.log(`nr2: ${nr2}`);
+
+      // #### Prefix and postfix operators
+      let nr = 2;
+      console.log(`nr++: ${nr++}`);
+      console.log(`nr: ${nr}`);
+
+      nr = 2;
+      console.log(`++nr: ${++nr}`);
+
+      nr1 = 4;
+      nr2 = 5;
+      nr3 = 2;
+      console.log(`nr1++ + ++nr2 * nr3++: ${nr1++ + ++nr2 * nr3++}`);
+
+      // ### Combining the operators
+
+      // ## Assignment operators
+      let x = 2;
+      x += 2;
+      console.log(`x: ${x}`);
+
+      x -= 2;
+      console.log(`x: ${x}`);
+
+      x *= 6;
+      console.log(`x: ${x}`);
+
+      x /= 3;
+      console.log(`x: ${x}`);
+
+      x **= 2;
+      console.log(`x: ${x}`);
+
+      x %= 3;
+      console.log(`x: ${x}`);
+
+      // ## Comparison operators
+      // ### Equal
+      x = 5;
+      let y = "5";
+      console.log(`x == y: ${x == y}`);
+      console.log(`x === y: ${x === y}`);
+
+      // ### Not equal
+      x = 5;
+      y = "5";
+      console.log(`x != y: ${x != y}`);
+      console.log(`x !== y: ${x !== y}`);
+
+      // ### Greater than and smaller than
+      x = 5;
+      y = 6;
+      console.log(`y > x: ${y > x}`);
+      console.log(`x > y: ${x > y}`);
+      console.log(`y > y: ${y > y}`);
+      console.log(`y >= y: ${y >= y}`);
+
+      console.log(`y < x: ${y < x}`);
+      console.log(`x < y: ${x < y}`);
+      console.log(`y < y: ${y < y}`);
+      console.log(`y <= y: ${y <= y}`);
+
+      // ## Logical operators
+      // ### And
+      x = 1;
+      y = 2;
+      let z = 3;
+      console.log(`x < y && y < z: ${x < y && y < z}`);
+      console.log(`x > y && y < z: ${x > y && y < z}`);
+
+      // ### Or
+      console.log(`x > y || y < z: ${x > y || y < z}`);
+      console.log(`x > y || y > z: ${x > y || y > z}`);
+
+      // ### Not
+      x = false;
+      console.log(`!x: ${!x}`);
+
+      x = 1;
+      y = 2;
+      console.log(`!(x < y): ${!(x < y)}`);
+    </script>
+  </head>
+</html>
