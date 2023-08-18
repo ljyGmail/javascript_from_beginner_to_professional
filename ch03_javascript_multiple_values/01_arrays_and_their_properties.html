@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Arrays and their properties</title>
+    <script>
+      // # Arrays and their properties
+      // ## Creating arrays
+      const arr1 = new Array("purple", "green", "yellow"); // wrong way
+      const arr2 = ["black", "orange", "pink"]; // right way
+
+      const arr3 = new Array(10); // create an array with 10 undefined values
+      const arr4 = [10];
+      console.log(`arr3: ${arr3}`);
+      console.log(`arr4: ${arr4}`);
+
+      let arr = ["hi there", 5, true];
+      console.log(`typeof arr[0]: ${typeof arr[0]}`);
+      console.log(`typeof arr[1]: ${typeof arr[1]}`);
+      console.log(`typeof arr[2]: ${typeof arr[2]}`);
+
+      const constArr = ["hi there"];
+      constArr[0] = "new value";
+      console.log(`constArr[0]: ${constArr[0]}`);
+      // constArr = ["nope, now you are overwriting the array"];
+
+      // ## Accessing elements
+      const cars = ["Toyota", "Renault", "Volkswagen"];
+      console.log(`cars[0]: ${cars[0]}`);
+      console.log(`cars[1]: ${cars[1]}`);
+      console.log(`cars[2]: ${cars[2]}`);
+
+      console.log(`cars[3]: ${cars[3]}`);
+      console.log(`cars[-1]: ${cars[-1]}`);
+
+      // ## Overwriting elements
+      cars[0] = "Tesla";
+      console.log(`cars[0]: ${cars[0]}`);
+      console.log(`cars: ${cars}`);
+
+      // try to overwrite an element that does not exist
+      cars[3] = "Kia";
+      cars[-1] = "Fiat";
+      console.log(`cars[3]: ${cars[3]}`);
+      console.log(`cars[-1]: ${cars[-1]}`);
+
+      // ## Built-in length property
+      const colors = ["black", "orange", "pink"];
+      const booleans = [true, false, false, true];
+      const emptyArray = [];
+
+      console.log(`Length of colors: ${colors.length}`);
+      console.log(`Length of booleans: ${booleans.length}`);
+      console.log(`Length of empty array: ${emptyArray.length}`);
+
+      const lastElement = colors[colors.length - 1];
+      console.log(`lastElement: ${lastElement}`);
+
+      const numbers = [12, 24, 36];
+      numbers[5] = 48;
+      console.log(`numbers.length: ${numbers.length}`);
+      console.log(`numbers: ${numbers}`);
+    </script>
+  </head>
+</html>

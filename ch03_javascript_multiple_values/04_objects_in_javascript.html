@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Objects in JavaScript</title>
+    <script>
+      // # Objects in JavaScript
+      let arr = [0, 1, 2];
+      console.log(`arr: ${typeof arr}`);
+
+      let dog = {
+        dogName: "JavaScript",
+        weight: 2.4,
+        color: "brown",
+        breed: "chihuahua",
+        age: 3,
+        burglarBiter: true,
+      };
+
+      let dogColor1 = dog["color"];
+      console.log(`dogColor1: ${dogColor1}`);
+
+      let dogColor2 = dog.color;
+      console.log(`dogColor2: ${dogColor2}`);
+
+      // ## Updating objects
+      dog["color"] = "blue";
+      dog.weight = 2.3;
+      console.log("dog:", dog);
+
+      dog["age"] = "three";
+      console.log("dog:", dog);
+
+      let variable = "age";
+      console.log("age:", dog[variable]);
+
+      variable = "breed";
+      console.log("breed:", dog[variable]);
+
+      dog[variable] = "dachshund";
+      console.log("breed:", dog["breed"]);
+    </script>
+  </head>
+</html>
