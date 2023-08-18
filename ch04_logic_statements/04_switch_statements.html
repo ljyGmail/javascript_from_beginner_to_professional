@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <title>switch statements</title>
+    <script>
+      // # switch statements
+      let activity = "Lunch";
+
+      switch (activity) {
+        case "Get up":
+          console.log("It it 6:30AM");
+          break;
+        case "Breakfast":
+          console.log("It it 7:00AM");
+          break;
+        case "Drive to work":
+          console.log("It it 8:00AM");
+          break;
+        case "Lunch":
+          console.log("It it 12:00PM");
+          break;
+        case "Drive home":
+          console.log("It it 5:00PM");
+          break;
+        case "Dinner":
+          console.log("It it 6:30PM");
+          break;
+      }
+
+      // ## The default case
+      activity = "Watch Netflix";
+      switch (activity) {
+        case "Get up":
+          console.log("It it 6:30AM");
+          break;
+        case "Breakfast":
+          console.log("It it 7:00AM");
+          break;
+        case "Drive to work":
+          console.log("It it 8:00AM");
+          break;
+        case "Lunch":
+          console.log("It it 12:00PM");
+          break;
+        case "Drive home":
+          console.log("It it 5:00PM");
+          break;
+        case "Dinner":
+          console.log("It it 6:30PM");
+          break;
+        default:
+          console.log("I cannot determine the current time.");
+          break;
+      }
+
+      // ## Combining cases
+      let grade = "C";
+      switch (grade) {
+        case "F":
+        case "D":
+          console.log("You've failed!");
+          break;
+        case "C":
+        case "B":
+          console.log("You've passed!");
+          break;
+        case "A":
+          console.log("Nice!");
+          break;
+        default:
+          console.log("I don't know this grade.");
+      }
+    </script>
+  </head>
+</html>
