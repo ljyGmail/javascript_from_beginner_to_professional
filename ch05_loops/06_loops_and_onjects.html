@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Loops and objects</title>
+    <script>
+      // # Loops and objects
+      // ## for in loop
+      let car = {
+        model: "Golf",
+        make: "Volkswagen",
+        year: 1999,
+        color: "black",
+      };
+
+      for (let prop in car) {
+        console.log(`${prop} -> ${car[prop]}`);
+      }
+
+      // ## Looping over objects by converting to an array
+      let arrKeys = Object.keys(car);
+      console.log(`arrKeys: ${arrKeys}`);
+
+      for (let key of Object.keys(car)) {
+        console.log(`key: ${key}`);
+      }
+
+      for (let value of Object.values(car)) {
+        console.log(`value: ${value}`);
+      }
+
+      for (let i = 0; i < arrKeys.length; i++) {
+        console.log(arrKeys[i] + ": " + car[arrKeys[i]]);
+      }
+
+      let arrEntries = Object.entries(car);
+      console.log(arrEntries);
+
+      for (const [key, value] of Object.entries(car)) {
+        console.log(key, ":", value);
+      }
+    </script>
+  </head>
+</html>

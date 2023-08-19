@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>break and continue</title>
+    <script>
+      // # break and continue
+      let cars = [
+        {
+          model: "Golf",
+          make: "Volkswagen",
+          year: 1999,
+          color: "black",
+        },
+        {
+          model: "Picanto",
+          make: "Kia",
+          year: 2020,
+          color: "red",
+        },
+        {
+          model: "Peugeot",
+          make: "208",
+          year: 2021,
+          color: "black",
+        },
+        {
+          model: "Fiaat",
+          make: "Punto",
+          year: 2020,
+          color: "black",
+        },
+      ];
+      // ## break
+      for (let i = 0; i < 10; i++) {
+        console.log(i);
+        if (i === 4) {
+          break;
+        }
+      }
+
+      for (let i = 0; i < cars.length; i++) {
+        if (cars[i].year >= 2020) {
+          if (cars[i].color === "black") {
+            console.log("I have found my new car:", cars[i]);
+            break;
+          }
+        }
+      }
+
+      // ## continue
+      for (let car of cars) {
+        if (car.color !== "black") {
+          continue;
+        }
+        if (car.year >= 2020) {
+          console.log("we could get this one:", car);
+        }
+      }
+
+      // log only the odd numbers
+      let i = 1;
+      while (i < 50) {
+        i++;
+        if ((i - 1) % 2 === 0) {
+          continue;
+        }
+        console.log(i - 1);
+      }
+
+      // a better way
+      for (let i = 1; i < 50; i = i + 2) {
+        console.log(i);
+      }
+
+      // ## break, continue, and nested loops
+      let groups = [
+        ["Martin", "Daniel", "Keith"],
+        ["Margot", "Marina", "Ali"],
+        ["Helen", "Jonah", "Sambikos"],
+      ];
+
+      // find all the groups that have two names  starting with an M
+      for (let i = 0; i < groups.length; i++) {
+        let matches = 0;
+        for (let j = 0; j < groups[i].length; j++) {
+          if (groups[i][j].startsWith("M")) {
+            matches++;
+          } else {
+            continue;
+          }
+          if (matches === 2) {
+            console.log("Found a group with two names starting with an M:");
+            console.log(groups[i]);
+            break;
+          }
+        }
+      }
+
+      console.log("@@@");
+      for (let group of groups) {
+        for (let member of group) {
+          if (member.startsWith("M")) {
+            console.log("found one starting with M:", member);
+            break;
+          }
+        }
+      }
+
+      console.log("@@@");
+      // ## break and continue and labeled blocks
+      outer: for (let group of groups) {
+        inner: for (let member of group) {
+          if (member.startsWith("M")) {
+            console.log("found one starting with M:", member);
+            break outer;
+          }
+        }
+      }
+    </script>
+  </head>
+</html>
