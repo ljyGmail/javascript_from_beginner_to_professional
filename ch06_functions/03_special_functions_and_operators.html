@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <title>Special functions and operators</title>
+    <script>
+      // # Special functions and operators
+      // ## Arrow functions
+      /*
+        * Arrow functions look like this:
+        (param1, param2) => body of the function;
+        - Or for no parameters:
+        () => body of the function;
+        - Or for one parameter (no parentheses are needed here):
+        param => body of the function;
+        Or for a multiline function with two parameters:
+        (param1, param2) => {
+            // line 1;
+            // any number of lines;
+        };
+        */
+
+      function doingStuff(x) {
+        console.log(x);
+      }
+
+      // Rewrite the above function to an arrow function:
+      let doingArrowStuff = (x) => console.log(x);
+      doingArrowStuff("Great");
+
+      // More than one argument
+      let addTwoNumbers = (x, y) => console.log(x + y);
+      addTwoNumbers(5, 3);
+
+      // No arguments
+      let sayHi = () => console.log("hi");
+      sayHi();
+
+      // Combine arrow function with certain built-in methods
+      const arr = ["squirrel", "alpaca", "buddy"];
+      arr.forEach((e) => console.log(e));
+
+      // ## Spread operator
+      let spread = ["so", "much", "fun"];
+      let message = ["Javascript", "is", ...spread, "and", "very", "powerful"];
+
+      console.log("message:", message);
+
+      function addThreeNumbers(x, y, z) {
+        console.log(x + y + z);
+      }
+
+      let adders = [5, 9, 2];
+      addThreeNumbers(...adders); // the same as addThreeNumbers(5, 9, 2)
+
+      function addFourNumbers(x, y, z, a) {
+        console.log(x + y + z + a);
+      }
+      let adders1 = [5, 9];
+      let adders2 = [6, 7];
+      addFourNumbers(...adders1, ...adders2);
+
+      // ## Rest parameter
+      function someFunction(param1, param2) {
+        console.log(param1, param2);
+      }
+      someFunction("hi", "there!", "How are you?");
+
+      function someRestFunction(param1, ...param2) {
+        console.log(param1, param2);
+      }
+      someRestFunction("hi", "there", "How are you?");
+    </script>
+  </head>
+</html>

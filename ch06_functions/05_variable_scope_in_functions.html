@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Variable scope in functions</title>
+    <script>
+      // # Variable scope in functions
+      // ## Local variables in functions
+      function testAvailability(x) {
+        console.log("Available here:", x);
+      }
+
+      testAvailability("Hi!");
+      // console.log("Not available here:", x); // ReferenceError: x is not defined
+
+      function testAvailability2() {
+        let y = "Local variable";
+        console.log("Available here:", y);
+      }
+
+      testAvailability2();
+      // console.log("Not available here:", y); // ReferenceError: x is not defined
+
+      function testAvailability3() {
+        let y = "I'll return";
+        console.log("Available here:", y);
+        return y;
+      }
+
+      let z = testAvailability3();
+      console.log("Outside the function:", z);
+      //   console.log("Not available here:", y); // ReferenceError: x is not defined
+
+      // ### let versus var variables
+      function doingStuffVar() {
+        if (true) {
+          var x = "local";
+        }
+        console.log(x);
+      }
+
+      doingStuffVar();
+
+      function doingStuffLet() {
+        if (true) {
+          let x = "local"; // ReferenceError: x is not defined
+        }
+        console.log(x);
+      }
+
+      // doingStuffLet();
+
+      function doingStuffLetOrder() {
+        if (true) {
+          console.log(x); // ReferenceError
+          let x = "local";
+        }
+      }
+
+      // doingStuffLetOrder();
+
+      function doingStuffVarOrder() {
+        if (true) {
+          console.log(x);
+          var x = "local";
+        }
+      }
+
+      doingStuffVarOrder();
+
+      // ### const scope
+      function doingStuffConst() {
+        if (true) {
+          const X = "local";
+        }
+        console.log(X); // ReferenceError
+      }
+
+      // doingStuffConst();
+
+      // ## Globale variables
+    </script>
+  </head>
+</html>

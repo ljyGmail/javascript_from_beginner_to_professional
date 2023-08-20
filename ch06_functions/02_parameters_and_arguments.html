@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Parameters and arguments</title>
+    <script>
+      // # Parameters and arguments
+      function tester(para1, para2) {
+        return para1 + " " + para2;
+      }
+
+      const arg1 = "argument 1";
+      const arg2 = "argument 2";
+      console.log(`tester(arg1, arg2): ${tester(arg1, arg2)}`);
+
+      function addTwoNumbers(x, y) {
+        console.log(`x + y: ${x + y}`);
+      }
+
+      addTwoNumbers(3, 4);
+      addTwoNumbers(12, -90);
+
+      // ## Default or unsuitable parameters
+      addTwoNumbers();
+
+      function addTwoNumbers2(x = 2, y = 3) {
+        console.log(`x + y: ${x + y}`);
+      }
+
+      addTwoNumbers2();
+      addTwoNumbers2(6, 6);
+      addTwoNumbers2(10);
+
+      addTwoNumbers(1, 2, 3, 4);
+    </script>
+  </head>
+</html>
