@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>The BOM</title>
+    <script>
+      // # The BOM
+      console.dir(window);
+
+      console.log("window.history.length:", window.history.length);
+
+      // ## Window history object
+      console.dir(window.history);
+      console.dir(history);
+
+      window.history.go(-1);
+
+      // ## Window navigator object
+      console.dir(window.navigator);
+      console.dir(navigator);
+
+      // ## Window location object
+      console.dir(window.location);
+      console.dir(location);
+
+      console.log(
+        "location.ancestorOrigins.length:",
+        location.ancestorOrigins.length
+      );
+    </script>
+  </head>
+</html>

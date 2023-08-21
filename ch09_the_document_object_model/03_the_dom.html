@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>The DOM</title>
+    <script>
+      // # The DOM
+      // ## Additional DOM properties
+      console.dir(document);
+    </script>
+  </head>
+  <body>
+    <h1 class="output">Hello World</h1>
+    <div class="output">Test</div>
+    <script>
+      // ## Selecting page elements
+      const ele1 = document.querySelector("h1");
+      console.dir(ele1);
+
+      const eles = document.querySelectorAll(".output");
+      console.log("eles:", eles);
+    </script>
+  </body>
+</html>
