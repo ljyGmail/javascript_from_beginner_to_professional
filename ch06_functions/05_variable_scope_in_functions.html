@@ -77,6 +77,51 @@
       // doingStuffConst();
 
       // ## Globale variables
+      let globalVar = "Accessible everywhere!";
+      console.log("Outside function:", globalVar);
+
+      function creatingNewScope(x) {
+        console.log("Access to global vars inside function.", globalVar);
+      }
+
+      creatingNewScope("some parameter");
+
+      console.log("Still available:", globalVar);
+
+      let x = "global";
+
+      function doingStuffGlobal() {
+        let x = "local";
+        console.log(x);
+      }
+
+      doingStuffGlobal();
+      console.log(x);
+
+      function doingStuffParameter(x) {
+        console.log(x);
+      }
+
+      doingStuffParameter("param");
+
+      function confuseReader() {
+        x = "Guess my scope...";
+        console.log("Inside the function:", x);
+      }
+
+      confuseReader();
+
+      console.log("Outside of function:", x);
+
+      // ## Immediately invoked function expression
+      (function () {
+        console.log("IIFE!");
+      })();
+
+      // Combine IIFE with arrow functions
+      (() => {
+        console.log("run right away");
+      })();
     </script>
   </head>
 </html>
