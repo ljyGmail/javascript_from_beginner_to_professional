@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Prototypes</title>
+    <script>
+      // # Prototypes
+      class Person {
+        constructor(firstname, lastname) {
+          this.firstname = firstname;
+          this.lastname = lastname;
+        }
+
+        greet() {
+          console.log("Hi there!");
+        }
+      }
+
+      // add a function to this class using prototype
+      Person.prototype.introduce = function () {
+        console.log("Hi, I'm", this.firstname);
+      };
+
+      // add a property to class Person using prototype
+      Person.prototype.favoriteColor = "green";
+
+      let p = new Person("Maria", "Saga");
+      console.log(p.favoriteColor);
+      p.introduce();
+    </script>
+  </head>
+</html>
