@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Changing the classes of an element</title>
+    <script>
+      // # Changing the classes of an element
+      // ## Adding classes to elements
+      function disappear() {
+        document.getElementById("shape").classList.add("hide");
+      }
+
+      // ## Removing classes from elements
+      function change() {
+        document.getElementById("shape").classList.remove("blue");
+      }
+
+      // ## Toggling classes
+      function changeVisibility() {
+        document.getElementById("shape").classList.toggle("hide");
+      }
+    </script>
+    <style>
+      .hide {
+        display: none;
+      }
+
+      .square {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+      }
+
+      .square.blue {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="shape" class="square blue"></div>
+    <button onclick="disappear()">Disappear!</button>
+    <button onclick="change()">Change!</button>
+    <button onclick="changeVisibility()">Toggling!</button>
+  </body>
+</html>

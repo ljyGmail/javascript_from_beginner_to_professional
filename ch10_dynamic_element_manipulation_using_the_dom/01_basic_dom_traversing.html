@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic DOM traversing</title>
+    <script>
+      // # Basic DOM traversing
+    </script>
+  </head>
+  <body>
+    <h1>Let's find the treasure</h1>
+    <div id="forest">
+      <div id="tree1">
+        <div id="squirrel"></div>
+        <div id="flower"></div>
+      </div>
+      <div id="tree2">
+        <div id="shrubbery">
+          <div id="treasure"></div>
+        </div>
+        <div id="mushroom">
+          <div id="bug"></div>
+        </div>
+      </div>
+    </div>
+
+    <h1>Welcome page</h1>
+    <p id="greeting">Hi!</p>
+    <script>
+      console.dir(document.body);
+
+      console.dir(
+        document.body.children.forest.children.tree2.children.shrubbery.children
+          .treasure
+      );
+
+      console.dir(
+        document.body.childNodes[3].childNodes[3].childNodes[1].childNodes[1]
+      );
+
+      // combine them
+      console.dir(
+        document.body.childNodes[3].childNodes[3].childNodes[1].children
+          .treasure
+      );
+
+      console.dir(document.body.children.forest.children.tree2.parentElement);
+
+      // get tree2
+      console.dir(document.body.children.forest.children.tree2);
+
+      // get tree1 from tree2
+      console.dir(
+        document.body.children.forest.children.tree2.previousElementSibling
+      );
+
+      // get tree2 from tree1
+      console.dir(
+        document.body.children.forest.children.tree1.nextElementSibling
+      );
+
+      // ## Selecting elements as  objects
+      let greeting = document.body.children.greeting;
+      console.dir(greeting);
+
+      // ### Changing innerText
+      greeting.innerText = "Bye!";
+      // greeting.innerText = "<p>Bye</p>"; // not working as intended
+
+      // ### Changing innerHTML
+      greeting.innerHTML = "<b>Bye!</b>";
+    </script>
+  </body>
+</html>

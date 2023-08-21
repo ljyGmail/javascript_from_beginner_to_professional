@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Event listeners on elements</title>
+    <script>
+      // # Event listeners on elements
+      window.onload = function () {
+        document
+          .getElementById("square")
+          .addEventListener("click", changeColor);
+      };
+
+      function changeColor() {
+        let red = Math.floor(Math.random() * 256);
+        let green = Math.floor(Math.random() * 256);
+        let blue = Math.floor(Math.random() * 256);
+        this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+      }
+    </script>
+  </head>
+  <body>
+    <div id="square" style="width: 100px; background-color: grey">
+      Click for magic
+    </div>
+  </body>
+</html>

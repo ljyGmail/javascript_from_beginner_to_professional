@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>This and the DOM</title>
+    <script>
+      // # This and the DOM
+      function reveal(el) {
+        console.log("this:", el);
+        console.log("parent:", el.parentElement);
+        console.log("innerText:", el.innerText);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="reveal(this)">Click here!</button>
+  </body>
+</html>

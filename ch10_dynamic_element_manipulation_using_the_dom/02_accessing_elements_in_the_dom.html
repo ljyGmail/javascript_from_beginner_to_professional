@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Accessing elements in the DOM</title>
+    <script>
+      // # Accessing elements in the DOM
+    </script>
+  </head>
+  <body>
+    <h1>Just an example</h1>
+    <div id="one" class="example">Hi!</div>
+    <div id="two" class="example">Hi!</div>
+    <div id="three" class="something">Hi!</div>
+
+    <script>
+      // ## Accessing elements by ID
+      console.log("two:", document.getElementById("two"));
+
+      // ## Accessing elements by tag name
+      console.log("divs:", document.getElementsByTagName("div"));
+      console.log("secondDiv:", document.getElementsByTagName("div").item(1));
+      console.log(
+        "secondDivNamedItem:",
+        document.getElementsByTagName("div").namedItem("one")
+      );
+
+      console.log("h1:", document.getElementsByTagName("h1"));
+
+      // ## Accessing elements by class name
+      console.log("exampleClass:", document.getElementsByClassName("example"));
+
+      // ## Accessing elements with a CSS selector
+      console.log("selector p:", document.querySelectorAll("p"));
+
+      // ### Using querySelector()
+      console.log("querySelector(div):", document.querySelector("div"));
+      console.log(
+        "querySelector(.something):",
+        document.querySelector(".something")
+      );
+
+      // ### Using querySelectorAll()
+      console.log("querySelectorAll(div):", document.querySelectorAll("div"));
+    </script>
+  </body>
+</html>
