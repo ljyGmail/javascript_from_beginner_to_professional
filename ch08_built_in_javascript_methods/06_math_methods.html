@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Math methods</title>
+    <script>
+      // # Math methods
+      // ## Finding the highest and lowest number
+      let highest = Math.max(2, 56, 12, 1, 233, 4);
+      console.log("highest:", highest);
+
+      let lowest = Math.min(2, 56, 12, 1, 233, 4);
+      console.log("lowest:", lowest);
+
+      let highestOfWords = Math.max("hi", 3, "bye");
+      console.log("highestOfWords:", highestOfWords);
+
+      // ## Square root and raising to the power of
+      let result = Math.sqrt(64);
+      console.log("result:", result);
+
+      let result2 = Math.pow(5, 3);
+      console.log("result2:", result2);
+
+      // ## Turning decimals into integers
+      let x = 6.78;
+      let y = 5.34;
+      console.log("X:", x, "becomes", Math.round(x));
+      console.log("Y:", y, "becomes", Math.round(y));
+
+      console.log("X:", x, "becomes", Math.ceil(x));
+      console.log("Y:", y, "becomes", Math.ceil(y));
+
+      let negativeX = -x;
+      let negativeY = -y;
+      console.log("negativeX:", negativeX, "becomes", Math.ceil(negativeX));
+      console.log("negativeY:", negativeY, "becomes", Math.ceil(negativeY));
+
+      console.log("X:", x, "becomes", Math.floor(x));
+      console.log("Y:", y, "becomes", Math.floor(y));
+
+      console.log("negativeX:", negativeX, "becomes", Math.floor(negativeX));
+      console.log("negativeY:", negativeY, "becomes", Math.floor(negativeY));
+
+      console.log("X:", x, "becomes", Math.trunc(x));
+      console.log("Y:", y, "becomes", Math.trunc(y));
+
+      console.log("negativeX:", negativeX, "becomes", Math.trunc(negativeX));
+      console.log("negativeY:", negativeY, "becomes", Math.trunc(negativeY));
+
+      // ## Exponent and logarithm
+      x = 2;
+      let exp = Math.exp(x);
+      console.log("exp:", exp);
+      let log = Math.log(exp);
+      console.log("log:", log);
+    </script>
+  </head>
+</html>
