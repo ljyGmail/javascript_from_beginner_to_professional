@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>DOM event flow</title>
+    <script>
+      // # DOM event flow
+    </script>
+    <style>
+      div {
+        border: 1px solid black;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">Bubbling events</div>
+    <div id="output">
+      1
+      <div>
+        2
+        <div>
+          3
+          <div>
+            4
+            <div>5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function bubble() {
+        console.log(this.innerText);
+      }
+      let divs = document.getElementsByTagName("div");
+      for (let i = 0; i < divs.length; i++) {
+        divs[i].addEventListener("click", bubble);
+        // divs[i].addEventListener("click", bubble, true); // event capturing
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Specifying events</title>
+    <script>
+      // # Specifying events
+      // ## Specifying events with HTML
+      function magic() {
+        console.log("Specifying events with HTML");
+      }
+    </script>
+  </head>
+  <body>
+    <p id="unique" onclick="magic()">Click here for magic! (HTML)</p>
+    <p id="unique2">Click here for magic! (Event Handler)</p>
+    <p id="unique3">Click here for magic! (Event Listener)</p>
+    <script>
+      // ## Specifying events with JavaScript
+      document.getElementById("unique2").onclick = function () {
+        magic();
+      };
+
+      // ## Specifying events with event listeners
+      document.getElementById("unique3").addEventListener("click", magic);
+    </script>
+  </body>
+</html>

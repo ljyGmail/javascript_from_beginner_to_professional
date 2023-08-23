@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>Anothoer page</title>
+    <script>
+      let q = window.location.search;
+      let params = new URLSearchParams(q);
+      let name = params.get("name");
+      console.log("name:", name);
+    </script>
+  </head>
+</html>

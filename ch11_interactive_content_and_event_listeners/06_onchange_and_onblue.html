@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>onchange and onblue</title>
+    <script>
+      // # onchange and onblue
+      function message(m) {
+        document.getElementById("welcome").innerHTML = m;
+      }
+
+      function logEvent() {
+        let p = event.target;
+        if (p.name === "firstname") {
+          message("FIrst Name Changed to " + p.value);
+        } else {
+          message("Last Name Changed to " + p.value);
+        }
+      }
+
+      function sendInfo() {
+        let p = event.target.parentElement;
+        message("welcome " + p.firstname.value + " " + p.lastname.value);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="welcome">Hi there!</div>
+    <form>
+      <input
+        type="text"
+        name="firstname"
+        placeholder="First name"
+        onchange="logEvent()"
+      />
+      <input
+        type="text"
+        name="lastname"
+        placeholder="Last name"
+        onchange="logEvent()"
+      />
+      <input type="button" onclick="sendInfo()" value="Submit" />
+    </form>
+  </body>
+</html>

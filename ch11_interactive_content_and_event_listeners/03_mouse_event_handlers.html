@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Mouse event handlers</title>
+    <script>
+      // # Mouse event handlers
+    </script>
+  </head>
+  <body>
+    <!--
+    <div
+      id="divvy"
+      onmouseover="changeColor()"
+      style="width: 100px; height: 100px; background-color: pink"
+    -->
+    <div id="divvy" style="width: 100px; height: 100px; background-color: pink;"></div>
+    </div>
+    <script>
+      /*
+      function changeColor() {
+        document.getElementById("divvy").style.backgroundColor = "blue";
+      }
+      */
+      function changeColor(el, color) {
+        console.dir(el);
+        el.style.backgroundColor = color;
+      }
+
+      window.onload = function () {
+        console.log("hi");
+        let divvy = document.getElementById("divvy");
+
+        divvy.addEventListener("mousedown", function () {
+          changeColor(this, "green");
+        });
+
+        divvy.addEventListener("mouseup", function () {
+          changeColor(this, "yellow");
+        });
+
+        divvy.addEventListener("dblclick", function () {
+          changeColor(this, "black");
+        });
+
+        divvy.addEventListener("mouseout", function () {
+          changeColor(this, "blue");
+        });
+
+        console.log("hi2");
+      };
+    </script>
+  </body>
+</html>

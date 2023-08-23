@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>THe onload event handler</title>
+    <script>
+      // # THe onload event handler
+      window.onload = function () {
+        // whatever needs to happen after the page loads goes here
+        console.log("window loaded");
+      };
+
+      document.addEventListener("DOMContentLoaded", (e) => {
+        console.log(e);
+      });
+
+      function unique() {
+        console.log("body onload"); // this will overwrite window.onload
+      }
+    </script>
+  </head>
+  <body onload="unique()"></body>
+</html>
