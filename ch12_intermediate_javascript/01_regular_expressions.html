@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Regular expressions</title>
+    <script>
+      // # Regular expressions
+      let text = "I love JavaScript!";
+      console.log(text.match(/javascript/));
+      console.log(text.match(/javascript/i));
+
+      // ## Specifying multiple options for words
+      text = "I love JavaScript!";
+      console.log(text.match(/javascript|nodejs|react/i));
+
+      text = "I love React and JavaScript!";
+      console.log(text.match(/javascript|nodejs|react/i));
+
+      text = "I love React and JavaScript!";
+      console.log(text.match(/javascript|nodejs|react/gi));
+
+      // ## Character options
+      text = "d";
+      console.log(text.match(/[abc]/));
+      console.log(text.match(/[abcd]/));
+
+      text = "d";
+      console.log(text.match(/[a-d]/));
+
+      text = "t";
+      console.log(text.match(/[a-zA-Z]/));
+      console.log(text.match(/[a-z]/i));
+      console.log(text.match(/[a-zA-Z0-9]/));
+
+      text = "äé!";
+      console.log(text.match(/[a-zA-Z0-9]/));
+
+      text = "Just some text.";
+      console.log(text.match(/./g));
+      console.log(text.match(/\./g));
+
+      text = "I'm 29 years old.";
+      console.log(text.match(/\d/g));
+
+      text = "Coding is a lot of fun!";
+      console.log(text.match(/\s/g));
+
+      text = "In the end or at the beginning?";
+      console.log(text.match(/\bin/gi));
+
+      let nr = 357;
+      // nr.match(/3/g); // TypeError
+
+      // ## Groups
+      text = "I love JavaScript!";
+      console.log(text.match(/(love|dislike)\s(javascript|spiders)/gi));
+
+      text = "I love JavaScript!";
+      console.log(text.match(/[a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9][a-zA-Z0-9]/g));
+
+      text = "You are doing great!";
+      console.log(text.match(/n?g/gi));
+
+      text = "123123123";
+      console.log(text.match(/(123)+/));
+
+      text = "abcabcabc";
+      console.log(text.match(/(abc){1,2}/));
+
+      text = "I love JavaScript!";
+      console.log(text.match(/(?<language>javascript)/i));
+
+      // ## Practical regex
+      // ### Searching and replacing strings
+      text = "That's not the case.";
+      console.log(text.search(/Case/i));
+
+      text = "Coding is fun. Coding opens up a lot of opportunities.";
+      console.log(text.replace("Coding", "JavaScript"));
+      console.log(text.replace(/Coding/g, "JavaScript"));
+
+      // ### Email validation
+      let emailPattern = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g;
+      let validEmail = "maaike_1234@emai.com";
+      let invalidEmail = "maaike@mail@.com";
+      console.log(validEmail.match(emailPattern));
+      console.log(invalidEmail.match(emailPattern));
+    </script>
+  </head>
+</html>

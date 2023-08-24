@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Debugging</title>
+    <script>
+      // # Debugging
+      // ## Breakpoints
+      // ## Error handling
+      function somethingVeryDangerous() {
+        console.log(i);
+        let i;
+      }
+
+      try {
+        somethingVeryDangerous();
+      } catch (e) {
+        if (e instanceof TypeError) {
+          console.log("TypeError!");
+        } else if (e instanceof ReferenceError) {
+          console.log("ReferenceError!");
+        } else {
+          // deal with all other exceptions
+          console.log(e);
+        }
+      }
+
+      function trySomething() {
+        throw RangeError();
+      }
+
+      try {
+        trySomething();
+      } catch (e) {
+        console.log("Oh oh");
+      } finally {
+        console.log("Error or no error, I will be logged!");
+      }
+    </script>
+  </head>
+</html>

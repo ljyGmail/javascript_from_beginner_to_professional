@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Local storage</title>
+    <script>
+      // # Local storage
+    </script>
+  </head>
+  <body>
+    <div id="stored"></div>
+    <script>
+      let message = "Hello storage!";
+      localStorage.setItem("example", message);
+
+      if (localStorage.getItem("example")) {
+        document.getElementById("stored").innerHTML =
+          localStorage.getItem("example");
+      }
+
+      console.log(localStorage.key(0));
+      console.log(localStorage.getItem(localStorage.key(0)));
+      // localStorage.removeItem("name"); // remove specified key-value pairs
+      // localStorage.clear(); // remove all the key-value pairs from the local storage
+    </script>
+  </body>
+</html>

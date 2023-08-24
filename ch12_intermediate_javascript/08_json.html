@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>JSON</title>
+    <script>
+      // # JSON
+      // ## Parsing JSON
+      let str = '{"name": "Maaike", "age": 30}';
+      let obj = JSON.parse(str);
+      console.log(obj.name, "is");
+
+      let dog = {
+        name: "wiesje",
+        breed: "dachshund",
+      };
+
+      let strDog = JSON.stringify(dog);
+      console.log(typeof strDog);
+      console.log(strDog);
+    </script>
+  </head>
+</html>

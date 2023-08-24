@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Using strict mode</title>
+    <script>
+      // # Using strict mode
+      /*
+      // the following code works if don't use strict mode
+      function sayHi() {
+        greeting = "Hello!";
+        console.log(greeting);
+      }
+
+      sayHi();
+      */
+
+      "use strict";
+      function sayHi() {
+        greeting = "Hello!"; // ReferenceError: greeting is not defined
+        console.log(greeting);
+      }
+
+      sayHi();
+    </script>
+  </head>
+</html>
