@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Event loop</title>
+    <script>
+      // # Event loop
+      // ## Call stack and callback queuee
+      console.log("Hi there");
+      // setTimeout(() => console.log("Sorry I'm late"), 1000);
+      setTimeout(() => console.log("Sorry I'm late"), 0);
+
+      console.log(add(4, 5));
+
+      function add(x, y) {
+        return x + y;
+      }
+    </script>
+  </head>
+</html>
