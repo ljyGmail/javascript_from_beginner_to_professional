@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Local file reader</title>
+    <script>
+      // # Local file reader
+    </script>
+  </head>
+  <body>
+    <input type="file" onchange="uploadFile(this.files)" />
+    <br />
+    <input type="file" multiple onchange="uploadMultipleFile(this.files)" />
+    <br />
+    <input type="file" onchange="uploadAndReadFile(this.files)" />
+    <div id="message"></div>
+    <script>
+      // ## Uploading files
+      let message = document.getElementById("message");
+      if (window.FileReader) {
+        message.innerText = "Good to go!";
+      } else {
+        message.innerText = "No FileReader :(";
+      }
+
+      function uploadFile(files) {
+        console.log(files[0]);
+        message.innerText = files[0].name;
+      }
+
+      function uploadMultipleFile(files) {
+        message.innerText = "";
+        for (let i = 0; i < files.length; i++) {
+          message.innerHTML += files[i].name + "<br>";
+        }
+      }
+
+      // ## Reading files
+      function uploadAndReadFile(files) {
+        let fr = new FileReader();
+        fr.onload = function (e) {
+          message.innerHTML = e.target.result;
+        };
+        fr.readAsText(files[0]);
+      }
+    </script>
+  </body>
+</html>
